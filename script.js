@@ -613,4 +613,51 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('DOMContentLoaded', () => {
         initFooterSection();
     });
+
+    // Mobile Navigation Functionality
+    function initMobileNav() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Handle mobile menu links
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Close menu when a link is clicked
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+                // Smooth scroll to section
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    }
+
+    // Add to DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', () => {
+        initMobileNav();
+        // ... existing initialization code ...
+    });
 });
