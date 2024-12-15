@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit Singh</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -48,11 +48,29 @@
             <div class="logo">RS</div>
             <div class="profile-pic">
                 <!-- Replace with your profile picture -->
-                <img src="profile-pic (1).png" alt="Profile Picture">
+                <img src="/assets/profile-pic (1).png" alt="Profile Picture">
             </div>
         </div>
     </div>
-    <nav class="dock-nav animate-element">
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#skills" class="mobile-link">Skills</a></li>
+                <li><a href="#projects" class="mobile-link">Projects</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Keep existing dock-nav but add mobile-hidden class -->
+    <nav class="dock-nav mobile-hidden animate-element">
         <ul class="dock-menu">
             <li class="dock-item active">
                 <i class="fas fa-home"></i>
@@ -365,7 +383,7 @@
                 <div class="project-card animate-element">
                     <div class="project-image">
                         <div class="symbiote-overlay"></div>
-                        <img src="111-1112824_picture-my-portfolio-logo-png.png" alt="Project 1">
+                        <img src="/assets/111-1112824_picture-my-portfolio-logo-png.png" alt="Project 1">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://github.com/your-username/project1" target="_blank" class="project-link">
@@ -399,7 +417,7 @@
                 <div class="project-card animate-element">
                     <div class="project-image">
                         <div class="symbiote-overlay"></div>
-                        <img src="taskManager-logo-290x150.jpg" alt="Project 2">
+                        <img src="/assets/taskManager-logo-290x150.jpg" alt="Project 2">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://github.com/your-username/project2" target="_blank" class="project-link">
@@ -433,7 +451,7 @@
                 <div class="project-card animate-element">
                     <div class="project-image">
                         <div class="symbiote-overlay"></div>
-                        <img src="abstract-modern-ecommerce-logo-ecommerce-logo-design-shop-logo-design-template-creative-ecommerce-logo-vector.jpg" alt="Project 3">
+                        <img src="/assets/abstract-modern-ecommerce-logo-ecommerce-logo-design-shop-logo-design-template-creative-ecommerce-logo-vector.jpg" alt="Project 3">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://github.com/your-username/project3" target="_blank" class="project-link">
@@ -497,6 +515,8 @@
             </div>
         </div>
     </section>
+
+    
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
@@ -685,7 +705,10 @@
         <div class="footer-web-points"></div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Certifications Section -->
+    
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>
