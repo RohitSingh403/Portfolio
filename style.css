@@ -35,7 +35,7 @@ body {
     min-height: 100vh;
     background: var(--bg-color);
     transition: background-color 0.3s ease;
-    cursor: none;
+    
 }
 
 .header {
@@ -988,7 +988,7 @@ body.loading {
 
 /* Add hover effect for clickable elements */
 a, button, .dock-item {
-    cursor: none;
+    cursor: pointer;
 }
 
 a:hover ~ .cursor,
